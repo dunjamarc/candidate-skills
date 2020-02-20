@@ -8,8 +8,6 @@
 
 .left {
     width: 40%;
-    height: 150px;
-    border: 1px solid black;
 
     @include breakpoint($tablet) {
         width: 100%;
@@ -30,13 +28,21 @@
 }
 
 .basic-data {
+    display: flex;
+    align-items: center;
 
     @include breakpoint($tablet) {
         order: 1;
     }
+
+    img {
+        width: 50%;
+        padding: 5%;
+    }
 }
 
 .contact {
+    padding: 2% 5%;
 
     @include breakpoint($tablet) {
         order: 2;
@@ -44,6 +50,7 @@
 }
 
 .graph {
+    padding: 2% 5%;
 
     @include breakpoint($tablet) {
         order: 4;

@@ -7,8 +7,6 @@
 
 .left {
   width: 40%;
-  height: 150px;
-  border: 1px solid black;
 }
 @media only screen and (max-width: 768px) {
   .left {
@@ -30,18 +28,32 @@
   }
 }
 
+.basic-data {
+  display: flex;
+  align-items: center;
+}
 @media only screen and (max-width: 768px) {
   .basic-data {
     order: 1;
   }
 }
+.basic-data img {
+  width: 50%;
+  padding: 5%;
+}
 
+.contact {
+  padding: 2% 5%;
+}
 @media only screen and (max-width: 768px) {
   .contact {
     order: 2;
   }
 }
 
+.graph {
+  padding: 2% 5%;
+}
 @media only screen and (max-width: 768px) {
   .graph {
     order: 4;
