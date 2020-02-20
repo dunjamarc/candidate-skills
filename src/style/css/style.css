@@ -1,3 +1,53 @@
+@media only screen and (max-width: 768px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.left {
+  width: 40%;
+  height: 150px;
+  border: 1px solid black;
+}
+@media only screen and (max-width: 768px) {
+  .left {
+    width: 100%;
+  }
+}
+
+.skills-list {
+  width: 60%;
+  border: 1px solid black;
+  height: 350px;
+  float: right;
+}
+@media only screen and (max-width: 768px) {
+  .skills-list {
+    float: none;
+    order: 3;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .basic-data {
+    order: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    order: 2;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .graph {
+    order: 4;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

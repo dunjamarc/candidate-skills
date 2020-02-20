@@ -1,5 +1,16 @@
 $white: #fff;
 $navy: #282c34;
+$mobile: 425px;
+$tablet: 768px;
+
+@mixin breakpoint($width) {
+
+    @media only screen and (max-width: #{$width}) {
+        @content;
+    }
+}
+
+@import 'home';
 
 * {
 	box-sizing: border-box;
