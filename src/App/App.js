@@ -1,14 +1,26 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import '../style/css/style.css';
+import Header from './partials/Header';
+import HomePage from './pages/HomePage';
+import Skills from './pages/Skills';
+import Static from './pages/Static';
+import Footer from './partials/Footer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        Lorem Ipsum
-      </header>
-    </div>
-  );
+  	return (
+    	<React.Fragment>
+			<BrowserRouter>
+				<Header />
+				<Switch>
+					<Route exact path='/' component={HomePage} />
+					<Route path='/skills' component={Skills} />
+					<Route path='/static' component={Static} />
+				</Switch>
+			</BrowserRouter>
+			<Footer />
+		</React.Fragment>
+  	);
 }
 
 export default App;
