@@ -1,11 +1,15 @@
 import React from "react";
+import SkillsList from "./SkillsList";
 
 const HomePage = () => {
     
     return (
         <section className="main">
             <div className="container home">
-                <div className="skills-list"></div>
+                <div className="skills-list">
+                    <h2>Skill Graph</h2>
+                    <SkillsList />
+                </div>
                 <div className="basic-data left">
                     <img src="https://image.flaticon.com/icons/svg/219/219969.svg" />
                     <div className="full-name">
