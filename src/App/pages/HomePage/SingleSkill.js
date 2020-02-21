@@ -6,7 +6,7 @@ const SingleSkill = (props) => {
         <div className="row">
             <p>{props.value.name}</p>
             <p>{props.value.year}</p>
-            <p>{props.value.rating}</p>
+            <p><div><span style={{width: props.value.rating * 10}}></span></div></p>
         </div>
     )
 }
