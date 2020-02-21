@@ -7,7 +7,7 @@ const HomePage = () => {
         <section className="main">
             <div className="container home">
                 <div className="skills-list">
-                    <h2>Skill Graph</h2>
+                    <h2>Skill List</h2>
                     <SkillsList />
                 </div>
                 <div className="basic-data left">

@@ -27,6 +27,11 @@ class SkillsList extends Component {
     render () {
         return (
             <div className="skills-wrap">
+                <div class="row">
+                    <p><b>Skill Name</b></p>
+                    <p><b>Skill Year Aquired</b></p>
+                    <p><b>Skill Rating</b></p>
+                </div>
                 {this.state.allSkills.map(el => <SingleSkill value={el} key={el.id}/>)}
             </div>
         )
