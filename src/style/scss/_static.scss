@@ -1,0 +1,43 @@
+.static {
+
+    @include breakpoint($tablet) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text {
+        width: 50%;
+        padding-top: 4%;
+    
+        @include breakpoint($tablet) {
+            width: 100%;
+        }
+
+        &:first-child {
+            order: 1;
+        }
+
+        &:nth-child(2) {
+            order: 3;
+        }
+    
+        h1 {
+            margin-bottom: 20px;
+        }
+    }
+    
+    .gallery {
+        width: 45%;
+        float: right;
+        margin-top: 4%;
+    
+        @include breakpoint($tablet) {
+            width: 100%;
+            order: 2;
+        }
+    
+        h1 {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -11,6 +11,7 @@ $tablet: 768px;
 }
 
 @import 'home';
+@import 'static';
 
 * {
 	box-sizing: border-box;
@@ -41,6 +42,10 @@ body {
 
 .main {
 	flex-grow: 1;
+}
+
+img {
+	max-width: 100%;
 }
 
 header,
