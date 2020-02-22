@@ -10,7 +10,8 @@ class Skills extends Component {
             allSkills: [],
             skillName: '',
             skillRating: 1,
-            skillYear: 0
+            skillYear: '',
+            title: 'Add New Skill'
         }
     }
 
@@ -62,6 +63,16 @@ class Skills extends Component {
             .then(() => this.fetchData())
     }
 
+    updateSkill = (event) => {
+        let skillEdit = this.state.allSkills[event.target.id];
+        this.setState({
+            skillName: skillEdit.name,
+            skillRating: skillEdit.rating,
+            skillYear: skillEdit.year,
+            title: 'Edit Skill'
+        })
+    }
+
     render () {
         return (
             <section className="main">
@@ -78,22 +89,22 @@ class Skills extends Component {
                             {this.state.allSkills.map(el => <div className="row" key={el.id}>
                                 <SingleSkill value={el}/>
                                 <div className="cta">
-                                    <i className="fas fa-edit"></i>
+                                    <i className="fas fa-edit" id={el.id} onClick={this.updateSkill}></i>
                                     <i className="fas fa-trash-alt" id={el.id} onClick={this.deleteSkill}></i>
                                 </div>
                             </div>)}
                         </div>
                     </div>
                     <div className="skill-form">
-                        <h2>Add New Skill</h2>
+                        <h2>{this.state.title}</h2>
                         <form>
                             <div>
                                 <label htmlFor="skill-name">Skill Name</label>
-                                <input id="skill-name" type="text" onChange={this.handleChange}></input>
+                                <input id="skill-name" type="text" onChange={this.handleChange} value={this.state.skillName}></input>
                             </div>
                             <div>
                                 <label htmlFor="skill-rating">Skill Rating</label>
-                                <select id="skill-rating" onChange={this.handleChange}>
+                                <select id="skill-rating" onChange={this.handleChange} value={this.state.skillRating}>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -108,7 +119,7 @@ class Skills extends Component {
                             </div>
                             <div>
                                 <label htmlFor="skill-year">Skill Year Aquired</label>
-                                <input id="skill-year" type="number" onChange={this.handleChange}></input>
+                                <input id="skill-year" type="number" onChange={this.handleChange} value={this.state.skillYear}></input>
                             </div>
                         </form>
                         <button onClick={this.handleClick}>SUBMIT</button>
