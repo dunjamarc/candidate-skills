@@ -58,9 +58,15 @@ class Skills extends Component {
             skillsData.sendSkill(`http://localhost:3001/skills`, obj)
             .then(() => this.fetchData())
         } else {
-            skillsData.updateSkill(`http://localhost:3001/skills`, obj)
+            skillsData.updateSkill(obj.id, obj)
             .then(() => this.fetchData()) 
         }
+        this.setState({
+            skillName: '',
+            skillRating: 1,
+            skillYear: '',
+            addSkill: true
+        })
     }
 
     deleteSkill = (event) => {

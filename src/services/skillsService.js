@@ -25,8 +25,8 @@ class SkillsService {
         })
     }
 
-    updateSkill(url, data) {
-        return fetch(url, {
+    updateSkill(id, data) {
+        return fetch(`http://localhost:3001/skills/${id}`, {
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
