@@ -75,8 +75,8 @@ class Skills extends Component {
                                 <p><b>Skill Rating</b></p>
                                 <p><b>CTA</b></p>
                             </div>
-                            {this.state.allSkills.map(el => <div className="row">
-                                <SingleSkill value={el} key={el.id}/>
+                            {this.state.allSkills.map(el => <div className="row" key={el.id}>
+                                <SingleSkill value={el}/>
                                 <div className="cta">
                                     <i className="fas fa-edit"></i>
                                     <i className="fas fa-trash-alt" id={el.id} onClick={this.deleteSkill}></i>
@@ -85,7 +85,7 @@ class Skills extends Component {
                         </div>
                     </div>
                     <div className="skill-form">
-                        <h2>Skill Form</h2>
+                        <h2>Add New Skill</h2>
                         <form>
                             <div>
                                 <label htmlFor="skill-name">Skill Name</label>

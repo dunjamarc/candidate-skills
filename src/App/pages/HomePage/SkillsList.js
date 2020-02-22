@@ -32,7 +32,7 @@ class SkillsList extends Component {
                     <p><b>Skill Year Aquired</b></p>
                     <p><b>Skill Rating</b></p>
                 </div>
-                {this.state.allSkills.map(el => <div className="row"><SingleSkill value={el} key={el.id}/></div>)}
+                {this.state.allSkills.map(el => <div className="row"  key={el.id}><SingleSkill value={el}/></div>)}
             </div>
         )
     }
