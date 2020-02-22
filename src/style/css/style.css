@@ -157,7 +157,8 @@ h2 {
 .skills .skill-form form div label {
   font-size: 12px;
 }
-.skills .skill-form form div input {
+.skills .skill-form form div input,
+.skills .skill-form form div select {
   font-size: 15px;
   padding: 5px;
   margin: 0 10% 10% 0;
