@@ -38,13 +38,13 @@
   width: 33%;
   margin-bottom: 10px;
 }
-.skills-list .skills-wrap .row p div {
+.skills-list .skills-wrap .row div {
   width: 100px;
   height: 10px;
   border: 1px solid #282c34;
   border-radius: 5px;
 }
-.skills-list .skills-wrap .row p div span {
+.skills-list .skills-wrap .row div span {
   display: block;
   height: 9px;
   background-color: #282c34;
@@ -81,6 +81,17 @@
   .graph {
     order: 4;
   }
+}
+
+.skills .skills-list {
+  float: none;
+  width: 50%;
+}
+.skills .skills-list .row p {
+  width: 25%;
+}
+.skills .skills-list .row .cta {
+  border: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -147,6 +158,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 15px;
 }
 
 .main {
@@ -160,7 +172,6 @@ img {
 header,
 footer {
   background-color: #282c34;
-  padding: 15px;
   font-size: 12px;
   color: #fff;
 }

@@ -3,11 +3,11 @@ import React from "react";
 const SingleSkill = (props) => {
 
     return (
-        <div className="row">
+        <React.Fragment>
             <p>{props.value.name}</p>
             <p>{props.value.year}</p>
-            <p><div><span style={{width: props.value.rating * 10}}></span></div></p>
-        </div>
+            <div><span style={{width: props.value.rating * 10}}></span></div>
+        </React.Fragment>
     )
 }
 

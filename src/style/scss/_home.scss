@@ -40,19 +40,19 @@
             p {
                 width: 33%;
                 margin-bottom: 10px;
+            }
 
-                div {
-                    width: 100px;
-                    height: 10px;
-                    border: 1px solid $navy;
+            div {
+                width: 100px;
+                height: 10px;
+                border: 1px solid $navy;
+                border-radius: 5px;
+
+                span {
+                    display: block;
+                    height: 9px;
+                    background-color: $navy;
                     border-radius: 5px;
-
-                    span {
-                        display: block;
-                        height: 9px;
-                        background-color: $navy;
-                        border-radius: 5px;
-                    }
                 }
             }
         }

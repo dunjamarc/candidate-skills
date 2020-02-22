@@ -11,7 +11,7 @@ const HomePage = () => {
                     <SkillsList />
                 </div>
                 <div className="basic-data left">
-                    <img src="https://image.flaticon.com/icons/svg/219/219969.svg" />
+                    <img src="https://image.flaticon.com/icons/svg/219/219969.svg" alt="avatar"/>
                     <div className="full-name">
                         <h2>Kristina</h2>
                         <h2>Milenkovic</h2>
