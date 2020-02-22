@@ -57,6 +57,11 @@ class Skills extends Component {
             .then(() => this.fetchData())
     }
 
+    deleteSkill = (event) => {
+        skillsData.deleteSkill(event.target.id)
+            .then(() => this.fetchData())
+    }
+
     render () {
         return (
             <section className="main">
@@ -74,7 +79,7 @@ class Skills extends Component {
                                 <SingleSkill value={el} key={el.id}/>
                                 <div className="cta">
                                     <i className="fas fa-edit"></i>
-                                    <i className="fas fa-trash-alt"></i>
+                                    <i className="fas fa-trash-alt" id={el.id} onClick={this.deleteSkill}></i>
                                 </div>
                             </div>)}
                         </div>
