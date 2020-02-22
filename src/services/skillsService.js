@@ -25,6 +25,14 @@ class SkillsService {
         })
     }
 
+    updateSkill(url, data) {
+        return fetch(url, {
+            method: 'PUT',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        })
+    }
+
     deleteSkill(id){
         return fetch(`http://localhost:3001/skills/${id}`, {
             method: 'DELETE',

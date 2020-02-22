@@ -8,10 +8,11 @@ class Skills extends Component {
         super(props);
         this.state = {
             allSkills: [],
+            skillId: 0,
             skillName: '',
             skillRating: 1,
             skillYear: '',
-            title: 'Add New Skill'
+            addSkill: true
         }
     }
 
@@ -45,17 +46,21 @@ class Skills extends Component {
     }
 
     handleClick = () => {
-        let skillId = this.state.allSkills.length;
-
+        let skillId;
+        skillId = this.state.addSkill ? this.state.allSkills.length : this.state.skillId;
         const obj = {
             id: skillId,
             name: this.state.skillName,
             year: this.state.skillYear,
             rating: this.state.skillRating
         };
-        
-        skillsData.sendSkill(`http://localhost:3001/skills`, obj)
+        if (this.state.addSkill){
+            skillsData.sendSkill(`http://localhost:3001/skills`, obj)
             .then(() => this.fetchData())
+        } else {
+            skillsData.updateSkill(`http://localhost:3001/skills`, obj)
+            .then(() => this.fetchData()) 
+        }
     }
 
     deleteSkill = (event) => {
@@ -66,10 +71,11 @@ class Skills extends Component {
     updateSkill = (event) => {
         let skillEdit = this.state.allSkills[event.target.id];
         this.setState({
+            skillId: skillEdit.id,
             skillName: skillEdit.name,
             skillRating: skillEdit.rating,
             skillYear: skillEdit.year,
-            title: 'Edit Skill'
+            addSkill: false
         })
     }
 
@@ -96,7 +102,7 @@ class Skills extends Component {
                         </div>
                     </div>
                     <div className="skill-form">
-                        <h2>{this.state.title}</h2>
+                        <h2>{this.state.addSkill ? 'Add New Skill' : 'Edit Skill'}</h2>
                         <form>
                             <div>
                                 <label htmlFor="skill-name">Skill Name</label>
