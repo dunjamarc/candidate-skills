@@ -24,14 +24,11 @@
         width: 100%;
     }
 
-    h2 {
-        margin: 30px 0 15px;
-    }
-
     .skills-wrap {
 
         .row {
             display: flex;
+            align-items: center;
 
             &:first-child {
                 margin: 5px 0;
@@ -57,6 +54,10 @@
             }
         }
     }
+}
+
+h2 {
+    margin: 30px 0 15px;
 }
 
 .basic-data {

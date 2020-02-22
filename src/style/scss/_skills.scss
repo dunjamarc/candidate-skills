@@ -1,8 +1,19 @@
 .skills {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($tablet) {
+        flex-direction: column;
+    }
 
     .skills-list {
         float: none;
         width: 50%;
+        order: 1;
+
+        @include breakpoint($tablet) {
+            width: 100%;
+        }
 
         .row {
 
@@ -12,7 +23,77 @@
 
             .cta {
                 border: none;
+                height: auto;
+                text-align: center;
+
+                i {
+                    margin: 5px;
+                    cursor: pointer;
+                }
             }
         }
+    }
+
+    .skill-form {
+        width: 45%;
+        order: 2;
+
+        @include breakpoint($tablet) {
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+
+                @include breakpoint($tablet) {
+                    width: 100%;
+                }
+
+                &:first-child {
+
+                    @include breakpoint($tablet) {
+                        order: 1;
+                    }
+                }
+
+                &:nth-child(2) {
+
+                    @include breakpoint($tablet) {
+                        order: 3;
+                    }
+                }
+
+                &:nth-child(3) {
+
+                    @include breakpoint($tablet) {
+                        order: 2;
+                    }
+                }
+
+                label {
+                    font-size: 12px;
+                }
+
+                input {
+                    font-size: 15px;
+                    padding: 5px;
+                    margin: 0 10% 10% 0;
+                }
+            }
+        }
+    }
+
+    button {
+        padding: 10px 20px;
+        color: $white;
+        background-color: $navy;
+        border: none;
+        cursor: pointer;
     }
 }

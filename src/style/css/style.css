@@ -25,11 +25,9 @@
     width: 100%;
   }
 }
-.skills-list h2 {
-  margin: 30px 0 15px;
-}
 .skills-list .skills-wrap .row {
   display: flex;
+  align-items: center;
 }
 .skills-list .skills-wrap .row:first-child {
   margin: 5px 0;
@@ -49,6 +47,10 @@
   height: 9px;
   background-color: #282c34;
   border-radius: 5px;
+}
+
+h2 {
+  margin: 30px 0 15px;
 }
 
 .basic-data {
@@ -83,15 +85,89 @@
   }
 }
 
+.skills {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .skills {
+    flex-direction: column;
+  }
+}
 .skills .skills-list {
   float: none;
   width: 50%;
+  order: 1;
+}
+@media only screen and (max-width: 768px) {
+  .skills .skills-list {
+    width: 100%;
+  }
 }
 .skills .skills-list .row p {
   width: 25%;
 }
 .skills .skills-list .row .cta {
   border: none;
+  height: auto;
+  text-align: center;
+}
+.skills .skills-list .row .cta i {
+  margin: 5px;
+  cursor: pointer;
+}
+.skills .skill-form {
+  width: 45%;
+  order: 2;
+}
+@media only screen and (max-width: 768px) {
+  .skills .skill-form {
+    width: 100%;
+  }
+}
+.skills .skill-form form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills .skill-form form div {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+@media only screen and (max-width: 768px) {
+  .skills .skill-form form div {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .skills .skill-form form div:first-child {
+    order: 1;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .skills .skill-form form div:nth-child(2) {
+    order: 3;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .skills .skill-form form div:nth-child(3) {
+    order: 2;
+  }
+}
+.skills .skill-form form div label {
+  font-size: 12px;
+}
+.skills .skill-form form div input {
+  font-size: 15px;
+  padding: 5px;
+  margin: 0 10% 10% 0;
+}
+.skills button {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #282c34;
+  border: none;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
