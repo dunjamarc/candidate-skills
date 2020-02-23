@@ -12,11 +12,13 @@ function App() {
     	<React.Fragment>
 			<BrowserRouter>
 				<Header />
+				<section className="main">
 				<Switch>
 					<Route exact path='/' component={HomePage} />
 					<Route path='/skills' component={Skills} />
 					<Route path='/static' component={Static} />
 				</Switch>
+				</section>
 			</BrowserRouter>
 			<Footer />
 		</React.Fragment>

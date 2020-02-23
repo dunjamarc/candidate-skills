@@ -1,27 +1,27 @@
 .home {
+    display: flex;
+    flex-direction: column;
 
     @include breakpoint($tablet) {
-        display: flex;
-        flex-direction: column;
+        display: block;
     }
 }
 
 .left {
-    width: 40%;
+    width: 100%;
 
     @include breakpoint($tablet) {
-        width: 100%;
+        width: 40%;
     }
 }
 
 .skills-list {
-    width: 60%;
-    float: right;
+    width: 100%;
+    order: 3;
 
     @include breakpoint($tablet) {
-        float: none;
-        order: 3;
-        width: 100%;
+        width: 60%;
+        float: right;
     }
 
     .skills-wrap {
@@ -56,16 +56,12 @@
     }
 }
 
-h2 {
-    margin: 30px 0 15px;
-}
-
 .basic-data {
-    display: flex;
-    align-items: center;
+    order: 1;
 
     @include breakpoint($tablet) {
-        order: 1;
+        display: flex;
+        align-items: center;
     }
 
     img {
@@ -76,16 +72,13 @@ h2 {
 
 .contact {
     padding: 2% 5%;
-
-    @include breakpoint($tablet) {
-        order: 2;
-    }
+    order: 2;
 }
 
 .graph {
-    padding: 2% 5%;
+    order: 4;
 
-    @include breakpoint($tablet) {
-        order: 4;
+    h2 {
+        margin-left: 13%;
     }
 }

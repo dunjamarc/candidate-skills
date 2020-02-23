@@ -1,28 +1,30 @@
-@media only screen and (max-width: 768px) {
+.home {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
   .home {
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
 }
 
 .left {
-  width: 40%;
+  width: 100%;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .left {
-    width: 100%;
+    width: 40%;
   }
 }
 
 .skills-list {
-  width: 60%;
-  float: right;
+  width: 100%;
+  order: 3;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .skills-list {
-    float: none;
-    order: 3;
-    width: 100%;
+    width: 60%;
+    float: right;
   }
 }
 .skills-list .skills-wrap .row {
@@ -39,27 +41,23 @@
 .skills-list .skills-wrap .row div {
   width: 100px;
   height: 10px;
-  border: 1px solid #282c34;
+  border: 1px solid #283143;
   border-radius: 5px;
 }
 .skills-list .skills-wrap .row div span {
   display: block;
   height: 9px;
-  background-color: #282c34;
+  background-color: #283143;
   border-radius: 5px;
 }
 
-h2 {
-  margin: 30px 0 15px;
-}
-
 .basic-data {
-  display: flex;
-  align-items: center;
+  order: 1;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .basic-data {
-    order: 1;
+    display: flex;
+    align-items: center;
   }
 }
 .basic-data img {
@@ -69,39 +67,33 @@ h2 {
 
 .contact {
   padding: 2% 5%;
-}
-@media only screen and (max-width: 768px) {
-  .contact {
-    order: 2;
-  }
+  order: 2;
 }
 
 .graph {
-  padding: 2% 5%;
+  order: 4;
 }
-@media only screen and (max-width: 768px) {
-  .graph {
-    order: 4;
-  }
+.graph h2 {
+  margin-left: 13%;
 }
 
 .skills {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .skills {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 .skills .skills-list {
-  float: none;
-  width: 50%;
   order: 1;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .skills .skills-list {
-    width: 100%;
+    width: 50%;
+    float: none;
   }
 }
 .skills .skills-list .row p {
@@ -117,42 +109,32 @@ h2 {
   cursor: pointer;
 }
 .skills .skill-form {
-  width: 45%;
   order: 2;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .skills .skill-form {
-    width: 100%;
+    width: 45%;
   }
 }
 .skills .skill-form form {
   display: flex;
   flex-wrap: wrap;
 }
-.skills .skill-form form div {
-  display: flex;
-  flex-direction: column;
-  width: 45%;
-}
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .skills .skill-form form div {
-    width: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
   }
 }
-@media only screen and (max-width: 768px) {
-  .skills .skill-form form div:first-child {
-    order: 1;
-  }
+.skills .skill-form form div:first-child {
+  order: 1;
 }
-@media only screen and (max-width: 768px) {
-  .skills .skill-form form div:nth-child(2) {
-    order: 3;
-  }
+.skills .skill-form form div:nth-child(2) {
+  order: 3;
 }
-@media only screen and (max-width: 768px) {
-  .skills .skill-form form div:nth-child(3) {
-    order: 2;
-  }
+.skills .skill-form form div:nth-child(3) {
+  order: 2;
 }
 .skills .skill-form form div label {
   font-size: 12px;
@@ -166,24 +148,24 @@ h2 {
 .skills button {
   padding: 10px 20px;
   color: #fff;
-  background-color: #282c34;
+  background-color: #283143;
   border: none;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) {
+.static {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
   .static {
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
 }
-.static .text {
-  width: 50%;
-  padding-top: 4%;
-}
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .static .text {
-    width: 100%;
+    width: 50%;
+    padding-top: 4%;
   }
 }
 .static .text:first-child {
@@ -196,14 +178,13 @@ h2 {
   margin-bottom: 20px;
 }
 .static .gallery {
-  width: 45%;
-  float: right;
-  margin-top: 4%;
+  order: 2;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .static .gallery {
-    width: 100%;
-    order: 2;
+    width: 45%;
+    float: right;
+    margin-top: 4%;
   }
 }
 .static .gallery h1 {
@@ -246,9 +227,13 @@ img {
   max-width: 100%;
 }
 
+h2 {
+  margin: 30px 0 15px;
+}
+
 header,
 footer {
-  background-color: #282c34;
+  background-color: #283143;
   font-size: 12px;
   color: #fff;
 }

@@ -52,7 +52,6 @@ class HomePage extends Component {
     
     render () {
         return (
-        <section className="main">
             <div className="container home">
                 <div className="skills-list">
                     <h2>Skill List</h2>
@@ -78,14 +77,14 @@ class HomePage extends Component {
                     <Chart
                     chartType="LineChart"
                     width="100%"
-                    height="300px"
+                    height="200px"
                     data={this.state.chartData}
                     options={options}
                     />
                 </div>
             </div>
-        </section>
-    )}
+        )
+    }
 }
 
 export default HomePage;
