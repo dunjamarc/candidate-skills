@@ -40,7 +40,7 @@ class Skills extends Component {
             })
         } else if (event.target.id === "skill-year"){
             this.setState({
-                skillYear: event.target.value,
+                skillYear: parseInt(event.target.value),
             })
         }
     }

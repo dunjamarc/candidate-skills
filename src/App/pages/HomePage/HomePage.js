@@ -3,14 +3,7 @@ import skillsData from '../../../services/skillsService';
 import SkillsList from "./SkillsList";
 import { Chart } from "react-google-charts";
 
-const data = [
-    ["Year", "Number of Skills"],
-    ["2016", 7],
-    ["2017", 8],
-    ["2018", 9],
-    ["2019", 9],
-    ["2020", 10],
-];
+let data = [["Year", "Number of Skills"]];
 const options = {
     curveType: "function",
     legend: { position: "bottom" }
@@ -32,10 +25,25 @@ class HomePage extends Component {
                 allSkills: data
             })
         })
+        .then(() => this.chartData())
     }
 
     componentDidMount(){
-        this.fetchData();
+        this.fetchData()
+    }
+
+    chartData = () => {
+        let skillData = this.state.allSkills;
+        let years = [];
+        let singleData = [];
+
+        skillData.map((el) => years.push(el.year));
+        years.sort().map((el, i) => {
+            singleData = [el.toString(), i+1];
+            if(el !== years[i+1]){
+                data.push(singleData);
+            }
+        })
     }
     
     render () {
