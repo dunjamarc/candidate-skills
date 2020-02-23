@@ -183,11 +183,22 @@
 .skills .skills-list {
   order: 1;
 }
+.skills .skills-list h2 {
+  margin-top: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .skills .skills-list h2 {
+    margin-top: 30px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .skills .skills-list {
     width: 50%;
     float: none;
   }
+}
+.skills .skills-list .row {
+  position: relative;
 }
 .skills .skills-list .row:first-child p:nth-child(3) {
   width: 100px;
@@ -198,16 +209,44 @@
 .skills .skills-list .row p {
   width: 25%;
 }
+.skills .skills-list .row .year {
+  width: 100px;
+  margin-right: 45px;
+  margin-left: auto;
+}
 @media only screen and (min-width: 768px) {
   .skills .skills-list .row .year {
     width: 25%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.skills .skills-list .row .bar {
+  margin-right: 45px;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .skills .skills-list .row .bar {
+    margin-right: 0;
+    margin-top: 0;
   }
 }
 .skills .skills-list .row .cta {
   border: none;
-  height: auto;
   text-align: center;
-  width: 25%;
+  width: 10%;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .skills .skills-list .row .cta {
+    position: static;
+    display: block;
+    width: 25%;
+  }
 }
 .skills .skills-list .row .cta i {
   margin: 5px;

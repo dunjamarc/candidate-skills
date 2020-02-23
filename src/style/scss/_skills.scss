@@ -10,12 +10,21 @@
     .skills-list {
         order: 1;
 
+        h2 {
+            margin-top: 10px;
+            
+            @include breakpoint($tablet) {
+                margin-top: 30px;
+            }
+        }
+
         @include breakpoint($tablet) {
             width: 50%;
             float: none;
         }
 
         .row {
+            position: relative;
 
             &:first-child {
 
@@ -33,17 +42,42 @@
             }
 
             .year {
+                width: 100px;
+                margin-right: 45px;
+                margin-left: auto;
                 
                 @include breakpoint($tablet) {
                     width: 25%;
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+            }
+
+            .bar {
+                margin-right: 45px;
+                margin-top: 10px;
+
+                @include breakpoint($tablet) {
+                    margin-right: 0;
+                    margin-top: 0;
                 }
             }
 
             .cta {
                 border: none;
-                height: auto;
                 text-align: center;
-                width: 25%;
+                width: 10%;
+                position: absolute;
+                top: -5px;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+
+                @include breakpoint($tablet) {
+                    position: static;
+                    display: block;
+                    width: 25%;
+                }
 
                 i {
                     margin: 5px;
