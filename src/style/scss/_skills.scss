@@ -17,6 +17,17 @@
 
         .row {
 
+            &:first-child {
+
+                p:nth-child(3) {
+                    width: 100px;
+                }
+
+                p:nth-child(4) {
+                    text-align: center;
+                }
+            }
+
             p {
                 width: 25%;
             }
@@ -25,10 +36,12 @@
                 border: none;
                 height: auto;
                 text-align: center;
+                width: 25%;
 
                 i {
                     margin: 5px;
                     cursor: pointer;
+                    color: $navy;
                 }
             }
         }

@@ -187,6 +187,12 @@
     float: none;
   }
 }
+.skills .skills-list .row:first-child p:nth-child(3) {
+  width: 100px;
+}
+.skills .skills-list .row:first-child p:nth-child(4) {
+  text-align: center;
+}
 .skills .skills-list .row p {
   width: 25%;
 }
@@ -194,10 +200,12 @@
   border: none;
   height: auto;
   text-align: center;
+  width: 25%;
 }
 .skills .skills-list .row .cta i {
   margin: 5px;
   cursor: pointer;
+  color: #283143;
 }
 .skills .skill-form {
   order: 2;

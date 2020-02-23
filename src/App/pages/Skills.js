@@ -93,9 +93,9 @@ class Skills extends Component {
                     <div className="skills-wrap">
                         <div className="row">
                             <p><b>Skill Name</b></p>
-                            <p><b>Skill Year Aquired</b></p>
+                            <p><b>Skill Year<br /> Aquired</b></p>
                             <p><b>Skill Rating</b></p>
-                            <p><b>CTA</b></p>
+                            <p><b>Edit/Delete</b></p>
                         </div>
                         {this.state.allSkills.map(el => <div className="row" key={el.id}>
                             <SingleSkill value={el}/>
