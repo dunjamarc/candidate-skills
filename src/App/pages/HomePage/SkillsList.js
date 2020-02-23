@@ -1,41 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SingleSkill from './SingleSkill';
-import skillsData from '../../../services/skillsService';
 
-class SkillsList extends Component {
+const SkillsList = (props) => {
 
-    constructor (props){
-        super(props);
-        this.state = {
-            allSkills: []
-        }
-    }
-
-    fetchData = () => {
-       skillsData.allSkillsData()
-        .then(data => {
-            this.setState({
-                allSkills: data
-            })
-        })
-    }
-
-    componentDidMount(){
-        this.fetchData();
-    }
-
-    render () {
-        return (
-            <div className="skills-wrap">
-                <div className="row">
-                    <p><b>Skill Name</b></p>
-                    <p><b>Skill Year Aquired</b></p>
-                    <p><b>Skill Rating</b></p>
-                </div>
-                {this.state.allSkills.map(el => <div className="row"  key={el.id}><SingleSkill value={el}/></div>)}
+    return (
+        <div className="skills-wrap">
+            <div className="row">
+                <p><b>Skill Name</b></p>
+                <p><b>Skill Year Aquired</b></p>
+                <p><b>Skill Rating</b></p>
             </div>
-        )
-    }
+            {props.value.map(el => <div className="row" key={el.id}><SingleSkill value={el}/></div>)}
+        </div>
+    )
 }
 
 export default SkillsList;
