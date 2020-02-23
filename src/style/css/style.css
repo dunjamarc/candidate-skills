@@ -264,6 +264,16 @@
 .skills .skill-form form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+@media only screen and (min-width: 768px) {
+  .skills .skill-form form {
+    padding: 0 10px 0 0;
+  }
+}
+.skills .skill-form form div {
+  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .skills .skill-form form div {
@@ -278,8 +288,18 @@
 .skills .skill-form form div:nth-child(2) {
   order: 3;
 }
+@media only screen and (min-width: 768px) {
+  .skills .skill-form form div:nth-child(2) {
+    order: 2;
+  }
+}
 .skills .skill-form form div:nth-child(3) {
   order: 2;
+}
+@media only screen and (min-width: 768px) {
+  .skills .skill-form form div:nth-child(3) {
+    order: 3;
+  }
 }
 .skills .skill-form form div label {
   font-size: 12px;
@@ -288,7 +308,8 @@
 .skills .skill-form form div select {
   font-size: 15px;
   padding: 5px;
-  margin: 0 10% 10% 0;
+  margin-bottom: 10%;
+  width: 100%;
 }
 .skills button {
   padding: 10px 20px;
@@ -296,6 +317,12 @@
   background-color: #283143;
   border: none;
   cursor: pointer;
+  margin-left: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .skills button {
+    margin-left: 0;
+  }
 }
 
 .static {

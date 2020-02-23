@@ -12,7 +12,7 @@
 
         h2 {
             margin-top: 10px;
-            
+
             @include breakpoint($tablet) {
                 margin-top: 30px;
             }
@@ -98,8 +98,15 @@
         form {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 10px;
+            
+            @include breakpoint($tablet) {
+                padding: 0 10px 0 0;
+            }
 
             div {
+                width: 100%;
 
                 @include breakpoint($tablet) {
                     width: 45%;
@@ -113,10 +120,18 @@
 
                 &:nth-child(2) {
                     order: 3;
+
+                    @include breakpoint($tablet) {
+                        order: 2;
+                    }
                 }
 
                 &:nth-child(3) {
                     order: 2;
+
+                    @include breakpoint($tablet) {
+                        order: 3;
+                    }
                 }
 
                 label {
@@ -127,7 +142,8 @@
                 select {
                     font-size: 15px;
                     padding: 5px;
-                    margin: 0 10% 10% 0;
+                    margin-bottom: 10%;
+                    width: 100%;
                 }
             }
         }
@@ -139,5 +155,10 @@
         background-color: $navy;
         border: none;
         cursor: pointer;
+        margin-left: 10px;
+
+        @include breakpoint($tablet) {
+            margin-left: 0;
+        }
     }
 }
