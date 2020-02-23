@@ -43,16 +43,15 @@
 }
 .skills-list .skills-wrap .row .bar {
   width: 100px;
-  height: 10px;
-  border: 1px solid #283143;
-  border-radius: 5px;
+  border: 2px solid #8691a6;
+  border-radius: 6px;
   box-sizing: content-box;
 }
 .skills-list .skills-wrap .row .bar span {
   display: block;
-  height: 11px;
+  height: 10px;
   background-color: #283143;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .basic-data {
