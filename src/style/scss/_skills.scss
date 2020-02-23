@@ -32,6 +32,13 @@
                 width: 25%;
             }
 
+            .year {
+                
+                @include breakpoint($tablet) {
+                    width: 25%;
+                }
+            }
+
             .cta {
                 border: none;
                 height: auto;

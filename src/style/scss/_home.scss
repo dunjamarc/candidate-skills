@@ -32,7 +32,7 @@
         padding: 0 10px;
 
         .row {
-            border-bottom: 1px solid $gray-blue;
+            border-bottom: 1px solid $light-gray;
 
             @include breakpoint($tablet) {
                 border-bottom: none;
@@ -71,10 +71,12 @@
                 text-align: right;
                 font-size: 14px;
                 margin: 5px 0;
+                width: 100%;
 
                 @include breakpoint($tablet) {
                     text-align: left;
                     font-size: initial;
+                    width: 33%;
                 }
 
                 span {
