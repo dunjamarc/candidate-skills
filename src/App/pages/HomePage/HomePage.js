@@ -58,11 +58,11 @@ class HomePage extends Component {
                     <SkillsList value={this.state.allSkills}/>
                 </div>
                 <div className="basic-data left">
-                    <img src="https://image.flaticon.com/icons/svg/219/219969.svg" alt="avatar"/>
                     <div className="full-name">
                         <h2>Kristina</h2>
                         <h2>Milenkovic</h2>
                     </div>
+                    <img src="https://image.flaticon.com/icons/svg/219/219969.svg" alt="avatar"/>
                 </div>
                 <div className="contact left">
                     <h3>Contact</h3>

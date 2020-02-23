@@ -29,6 +29,7 @@
     }
 
     .skills-wrap {
+        padding: 0 10px;
 
         .row {
             display: flex;
@@ -62,18 +63,29 @@
 
 .basic-data {
     order: 1;
+    display: flex;
+    flex-direction: column;
 
     @include breakpoint($tablet) {
-        display: flex;
         align-items: center;
+        flex-direction: row;
     }
 
     img {
         width: 50%;
         padding: 5%;
+
+        @include breakpoint($tablet) {
+            order: 1;
+            align-self: center;
+        }
     }
 
     .full-name {
+
+        @include breakpoint($tablet) {
+            order: 2;
+        }
 
         h2 {
             margin: 0;
@@ -110,6 +122,9 @@
     order: 4;
 
     h2 {
-        margin-left: 13%;
+
+        @include breakpoint($tablet) {
+            margin-left: 13%;
+        }
     }
 }

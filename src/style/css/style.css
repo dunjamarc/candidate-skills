@@ -30,6 +30,9 @@
 .skills-list h2 {
   border-bottom: 1px solid #7f838b;
 }
+.skills-list .skills-wrap {
+  padding: 0 10px;
+}
 .skills-list .skills-wrap .row {
   display: flex;
   align-items: center;
@@ -56,16 +59,29 @@
 
 .basic-data {
   order: 1;
+  display: flex;
+  flex-direction: column;
 }
 @media only screen and (min-width: 768px) {
   .basic-data {
-    display: flex;
     align-items: center;
+    flex-direction: row;
   }
 }
 .basic-data img {
   width: 50%;
   padding: 5%;
+}
+@media only screen and (min-width: 768px) {
+  .basic-data img {
+    order: 1;
+    align-self: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .basic-data .full-name {
+    order: 2;
+  }
 }
 .basic-data .full-name h2 {
   margin: 0;
@@ -95,8 +111,10 @@
 .graph {
   order: 4;
 }
-.graph h2 {
-  margin-left: 13%;
+@media only screen and (min-width: 768px) {
+  .graph h2 {
+    margin-left: 13%;
+  }
 }
 
 .skills {
