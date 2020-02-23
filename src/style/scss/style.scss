@@ -1,5 +1,7 @@
 $white: #fff;
+$black: #000;
 $navy: #283143;
+$gray: #7f838b;
 $mobile: 425px;
 $tablet: 768px;
 
@@ -51,7 +53,8 @@ img {
 }
 
 h2 {
-    margin: 30px 0 15px;
+	margin: 30px 0 15px;
+	font-weight: 600;
 }
 
 header,

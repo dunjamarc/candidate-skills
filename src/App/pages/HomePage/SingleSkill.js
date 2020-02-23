@@ -6,7 +6,7 @@ const SingleSkill = (props) => {
         <React.Fragment>
             <p>{props.value.name}</p>
             <p>{props.value.year}</p>
-            <div><span style={{width: props.value.rating * 10}}></span></div>
+            <div className="bar"><span style={{width: props.value.rating * 10}}></span></div>
         </React.Fragment>
     )
 }

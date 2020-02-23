@@ -67,9 +67,18 @@ class HomePage extends Component {
                 <div className="contact left">
                     <h3>Contact</h3>
                     <ul>
-                        <li>kristinamilenkovic@gmail.com</li>
-                        <li>https://www.linkedin.com/in/krismilenkovic/</li>
-                        <li>https://github.com/krismilenkovic/</li>
+                        <li>
+                            <i className="fas fa-envelope"></i>
+                            <a href="mailto:kristinamilenkovic@gmail.com">kristinamilenkovic@gmail.com</a>
+                        </li>
+                        <li>
+                            <i className="fab fa-linkedin"></i>
+                            <a target="_blank" href="https://www.linkedin.com/in/krismilenkovic/">linkedin.com/in/krismilenkovic/</a>
+                        </li>
+                        <li>
+                            <i className="fab fa-github-square"></i>
+                            <a target="_blank" href="https://github.com/krismilenkovic/">github.com/krismilenkovic/</a>
+                        </li>
                     </ul>
                 </div>
                 <div className="graph left">

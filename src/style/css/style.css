@@ -27,6 +27,9 @@
     float: right;
   }
 }
+.skills-list h2 {
+  border-bottom: 1px solid #7f838b;
+}
 .skills-list .skills-wrap .row {
   display: flex;
   align-items: center;
@@ -38,17 +41,18 @@
   width: 33%;
   margin-bottom: 10px;
 }
-.skills-list .skills-wrap .row div {
+.skills-list .skills-wrap .row .bar {
   width: 100px;
   height: 10px;
   border: 1px solid #283143;
   border-radius: 5px;
+  box-sizing: content-box;
 }
-.skills-list .skills-wrap .row div span {
+.skills-list .skills-wrap .row .bar span {
   display: block;
-  height: 9px;
+  height: 11px;
   background-color: #283143;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .basic-data {
@@ -64,10 +68,29 @@
   width: 50%;
   padding: 5%;
 }
+.basic-data .full-name h2 {
+  margin: 0;
+  font-weight: 700;
+}
 
 .contact {
   padding: 2% 5%;
   order: 2;
+}
+.contact li {
+  list-style-type: none;
+  padding: 3px 0;
+}
+.contact li i {
+  color: #7f838b;
+  margin-right: 20px;
+}
+.contact li a {
+  text-decoration: none;
+  color: #000;
+}
+.contact li a:hover {
+  color: #7f838b;
 }
 
 .graph {
@@ -229,6 +252,7 @@ img {
 
 h2 {
   margin: 30px 0 15px;
+  font-weight: 600;
 }
 
 header,
