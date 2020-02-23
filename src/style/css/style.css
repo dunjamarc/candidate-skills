@@ -34,21 +34,69 @@
   padding: 0 10px;
 }
 .skills-list .skills-wrap .row {
-  display: flex;
-  align-items: center;
+  border-bottom: 1px solid #8691a6;
+}
+@media only screen and (min-width: 768px) {
+  .skills-list .skills-wrap .row {
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+  }
 }
 .skills-list .skills-wrap .row:first-child {
   margin: 5px 0;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .skills-list .skills-wrap .row:first-child {
+    display: flex;
+  }
 }
 .skills-list .skills-wrap .row p {
-  width: 33%;
   margin-bottom: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .skills-list .skills-wrap .row p {
+    width: 33%;
+  }
+}
+.skills-list .skills-wrap .row .name {
+  float: left;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .skills-list .skills-wrap .row .name {
+    float: none;
+    margin-top: 0;
+  }
+}
+.skills-list .skills-wrap .row .year {
+  text-align: right;
+  font-size: 14px;
+  margin: 5px 0;
+}
+@media only screen and (min-width: 768px) {
+  .skills-list .skills-wrap .row .year {
+    text-align: left;
+    font-size: initial;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .skills-list .skills-wrap .row .year span {
+    display: none;
+  }
 }
 .skills-list .skills-wrap .row .bar {
   width: 100px;
   border: 2px solid #8691a6;
   border-radius: 6px;
   box-sizing: content-box;
+  margin: 0 0 10px auto;
+}
+@media only screen and (min-width: 768px) {
+  .skills-list .skills-wrap .row .bar {
+    margin: 0;
+  }
 }
 .skills-list .skills-wrap .row .bar span {
   display: block;
@@ -71,11 +119,11 @@
 .basic-data img {
   width: 50%;
   padding: 5%;
+  align-self: center;
 }
 @media only screen and (min-width: 768px) {
   .basic-data img {
     order: 1;
-    align-self: center;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -111,9 +159,12 @@
 .graph {
   order: 4;
 }
+.graph h2 {
+  border-bottom: 1px solid #7f838b;
+}
 @media only screen and (min-width: 768px) {
   .graph h2 {
-    margin-left: 13%;
+    margin: 0 30px 0 11%;
   }
 }
 

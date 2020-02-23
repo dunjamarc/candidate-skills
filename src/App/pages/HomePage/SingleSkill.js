@@ -4,8 +4,8 @@ const SingleSkill = (props) => {
 
     return (
         <React.Fragment>
-            <p>{props.value.name}</p>
-            <p>{props.value.year}</p>
+            <p className="name">{props.value.name}</p>
+            <p className="year"><span>Since </span>{props.value.year}</p>
             <div className="bar"><span style={{width: props.value.rating * 10}}></span></div>
         </React.Fragment>
     )

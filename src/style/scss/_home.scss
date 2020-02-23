@@ -32,16 +32,57 @@
         padding: 0 10px;
 
         .row {
-            display: flex;
-            align-items: center;
+            border-bottom: 1px solid $gray-blue;
+
+            @include breakpoint($tablet) {
+                border-bottom: none;
+                display: flex;
+                align-items: center;
+            }
 
             &:first-child {
                 margin: 5px 0;
+                display: none;
+
+                @include breakpoint($tablet) {
+                    display: flex;
+                }
             }
 
             p {
-                width: 33%;
                 margin-bottom: 10px;
+
+                @include breakpoint($tablet) {
+                    width: 33%;
+                }
+            }
+
+            .name {
+                float: left;
+                margin-top: 10px;
+
+                @include breakpoint($tablet) {
+                    float: none;
+                    margin-top: 0;
+                }
+            }
+
+            .year {
+                text-align: right;
+                font-size: 14px;
+                margin: 5px 0;
+
+                @include breakpoint($tablet) {
+                    text-align: left;
+                    font-size: initial;
+                }
+
+                span {
+
+                    @include breakpoint($tablet) {
+                        display: none;
+                    }
+                }
             }
 
             .bar {
@@ -49,6 +90,11 @@
                 border: 2px solid $gray-blue;
                 border-radius: 6px;
                 box-sizing: content-box;
+                margin: 0 0 10px auto;
+
+                @include breakpoint($tablet) {
+                    margin: 0;
+                }
 
                 span {
                     display: block;
@@ -74,10 +120,10 @@
     img {
         width: 50%;
         padding: 5%;
+        align-self: center;
 
         @include breakpoint($tablet) {
             order: 1;
-            align-self: center;
         }
     }
 
@@ -122,9 +168,10 @@
     order: 4;
 
     h2 {
+        border-bottom: 1px solid $gray;
 
         @include breakpoint($tablet) {
-            margin-left: 13%;
+            margin: 0 30px 0 11%;
         }
     }
 }
