@@ -85,6 +85,14 @@ class Skills extends Component {
         })
     }
 
+    submit = () => {
+        if(!this.state.skillName || !this.state.skillYear){
+            return false;
+        } else {
+            this.handleClick();
+        }
+    }
+
     render () {
         const options = []
         for(let i = 1; i < 11; i++){
@@ -129,7 +137,7 @@ class Skills extends Component {
                             <input id="skill-year" type="number" onChange={this.handleChange} value={this.state.skillYear}></input>
                         </div>
                     </form>
-                    <button onClick={this.handleClick}>SUBMIT</button>
+                    <button onClick={this.submit}>SUBMIT</button>
                 </div>
             </div>
         )

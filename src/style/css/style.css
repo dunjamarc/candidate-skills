@@ -405,6 +405,15 @@ header .mobile-nav .menu li a {
   border: none;
   cursor: pointer;
   margin-left: 10px;
+  border: 1px solid #283143;
+  position: relative;
+  outline: none;
+}
+.skills button:hover {
+  background-color: rgba(40, 49, 67, 0.88);
+}
+.skills button:active {
+  top: 2px;
 }
 @media only screen and (min-width: 768px) {
   .skills button {

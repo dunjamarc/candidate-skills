@@ -158,6 +158,17 @@
         border: none;
         cursor: pointer;
         margin-left: 10px;
+        border: 1px solid $navy;
+        position: relative;
+        outline: none;
+
+        &:hover {
+            background-color: $navy-transparent;
+        }
+
+        &:active {
+            top: 2px;   
+        }
 
         @include breakpoint($tablet) {
             margin-left: 0;
