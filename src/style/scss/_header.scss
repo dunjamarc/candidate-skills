@@ -1,0 +1,13 @@
+header {
+
+	.nav-wrapper {
+		display: flex;
+		justify-content: space-between;
+        align-items: center;
+        
+        .brand-logo {
+            font-size: 33px;
+            font-weight: 900;
+        }
+	}
+}

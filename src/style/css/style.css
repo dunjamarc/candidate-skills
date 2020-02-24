@@ -1,3 +1,13 @@
+header .nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav-wrapper .brand-logo {
+  font-size: 33px;
+  font-weight: 900;
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -334,20 +344,22 @@
     display: block;
   }
 }
+.static h1 {
+  margin: 20px 0;
+}
 @media only screen and (min-width: 768px) {
   .static .text {
     width: 50%;
-    padding-top: 4%;
   }
 }
-.static .text:first-child {
+.static .text:nth-child(2) {
   order: 1;
 }
-.static .text:nth-child(2) {
+.static .text:nth-child(3) {
   order: 3;
 }
-.static .text h1 {
-  margin-bottom: 20px;
+.static .text p {
+  text-align: justify;
 }
 .static .gallery {
   order: 2;
@@ -356,11 +368,7 @@
   .static .gallery {
     width: 45%;
     float: right;
-    margin-top: 4%;
   }
-}
-.static .gallery h1 {
-  margin-bottom: 20px;
 }
 
 * {
@@ -420,12 +428,6 @@ header a,
 footer a {
   color: #fff;
   text-decoration: none;
-}
-
-header .nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
