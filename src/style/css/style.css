@@ -5,6 +5,8 @@ header .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 header .nav-wrapper .brand-logo {
   font-size: 33px;
@@ -35,6 +37,7 @@ header .nav-wrapper .menu a {
   color: #fff;
   text-decoration: none;
   padding: 15px 0;
+  font-size: 14px;
 }
 @media only screen and (min-width: 425px) {
   header .nav-wrapper .burger {
@@ -53,11 +56,13 @@ header .mobile-nav {
   transform: translateY(-100%);
   -webkit-transition: transform 0.3s;
   transition: transform 0.3s;
-  z-index: -1;
+  z-index: 0;
+  opacity: 0;
 }
 header .mobile-nav.show {
   -webkit-transform: translateY(0);
   transform: translateY(0);
+  opacity: 1;
 }
 @media only screen and (min-width: 425px) {
   header .mobile-nav {
@@ -75,6 +80,7 @@ header .mobile-nav .menu li {
 header .mobile-nav .menu li a {
   text-decoration: none;
   color: #fff;
+  font-size: 14px;
 }
 
 .home {
