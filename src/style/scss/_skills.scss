@@ -83,6 +83,20 @@
                     margin: 5px;
                     cursor: pointer;
                     color: $navy;
+
+                    &.fa-edit {
+
+                        &:hover {
+                            color: green;
+                        }
+                    }
+
+                    &.fa-trash-alt {
+
+                        &:hover {
+                            color: $redish;
+                        }
+                    }
                 }
             }
         }

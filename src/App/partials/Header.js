@@ -29,7 +29,7 @@ class Header extends Component {
                             <li><Link to="/static">STATIC</Link></li>
                         </ul>
                         <span className="burger" onClick={this.addClass}>
-                            <i className="fa fa-bars"></i>
+                            <i className="fas fa-bars"></i>
                         </span>
                     </nav>
                 </div>

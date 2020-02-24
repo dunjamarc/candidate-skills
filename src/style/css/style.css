@@ -338,6 +338,12 @@ header .mobile-nav .menu li a {
   cursor: pointer;
   color: #283143;
 }
+.skills .skills-list .row .cta i.fa-edit:hover {
+  color: green;
+}
+.skills .skills-list .row .cta i.fa-trash-alt:hover {
+  color: #df8888;
+}
 .skills .skill-form {
   order: 2;
 }
