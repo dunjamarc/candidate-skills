@@ -141,9 +141,11 @@
                 input,
                 select {
                     font-size: 15px;
-                    padding: 5px;
+                    padding: 7px;
                     margin-bottom: 10%;
                     width: 100%;
+                    border: 1px solid $gray;
+                    outline: none;
                 }
             }
         }

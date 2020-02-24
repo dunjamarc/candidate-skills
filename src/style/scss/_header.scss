@@ -1,4 +1,5 @@
 header {
+    position: relative;
 
 	.nav-wrapper {
 		display: flex;
@@ -8,6 +9,82 @@ header {
         .brand-logo {
             font-size: 33px;
             font-weight: 900;
+            color: $white;
+            text-decoration: none;
         }
-	}
+
+        .menu {
+            display: none;
+
+            @include breakpoint($mobile) {
+                display: block;
+            }
+
+            li {
+                list-style-type: none;
+                display: inline-block;
+                padding: 0 15px;
+                -webkit-transition: transform .3s;
+                transition: transform .3s;
+
+                &:hover {
+                    -webkit-transform: translateY(-3px);
+                    transform: translateY(-3px);
+                }
+            }
+
+            a {
+                color: $white;
+                text-decoration: none;
+                padding: 15px 0;
+            }
+        }
+
+        .burger {
+
+            @include breakpoint($mobile) {
+                display: none;
+            }
+
+            i {
+                font-size: 25px;
+            }
+        }
+    }
+    
+    .mobile-nav {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: $navy-transparent;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        -webkit-transition: transform .3s;
+        transition: transform .3s;
+        z-index: -1;
+
+        &.show {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        @include breakpoint($mobile) {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+        }
+    }
 }

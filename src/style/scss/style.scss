@@ -1,6 +1,7 @@
 $white: #fff;
 $black: #000;
 $navy: #283143;
+$navy-transparent: rgba(40, 49, 67, .88);
 $gray: #7f838b;
 $gray-blue: #8691a6;
 $light-gray: #d2d6df;
@@ -65,15 +66,4 @@ footer {
     background-color: $navy;
 	font-size: 12px;
 	color: $white;
-	
-	li {
-		list-style-type: none;
-		display: inline-block;
-		padding: 15px;
-	}
-	
-	a {
-		color: $white;
-		text-decoration: none;
-	}
 }

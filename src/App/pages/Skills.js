@@ -88,7 +88,7 @@ class Skills extends Component {
     render () {
         const options = []
         for(let i = 1; i < 11; i++){
-            options.push(<option value={i}>{i}</option>)
+            options.push(<option key={i} value={i}>{i}</option>)
         }
 
         return (
