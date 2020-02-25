@@ -75,7 +75,13 @@ class Skills extends Component {
     }
 
     updateSkill = (event) => {
-        let skillEdit = this.state.allSkills[event.target.id];
+        let skillEdit;
+        let skillId = event.target.id;
+        this.state.allSkills.map(el => {
+            if(el.id == skillId){
+                skillEdit = el;
+            }
+        })
         this.setState({
             skillId: skillEdit.id,
             skillName: skillEdit.name,
