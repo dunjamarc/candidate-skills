@@ -78,7 +78,7 @@ class Skills extends Component {
         let skillEdit;
         let skillId = event.target.id;
         this.state.allSkills.map(el => {
-            if(el.id == skillId){
+            if(el.id === parseInt(skillId)){
                 skillEdit = el;
             }
         })
@@ -89,6 +89,7 @@ class Skills extends Component {
             skillYear: skillEdit.year,
             addSkill: false
         })
+        document.querySelector('.skill-form').scrollIntoView({behavior: "smooth"});
     }
 
     submit = () => {
