@@ -462,6 +462,18 @@ header .mobile-nav .menu li a {
     float: right;
   }
 }
+.static .gallery .nav {
+  position: relative;
+}
+.static .gallery .nav:first-of-type {
+  left: 5px;
+}
+.static .gallery .nav:last-of-type {
+  right: 5px;
+}
+.static .gallery .each-slide div {
+  height: 300px;
+}
 
 * {
   box-sizing: border-box;

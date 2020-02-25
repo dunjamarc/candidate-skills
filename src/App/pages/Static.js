@@ -1,12 +1,40 @@
 import React from "react";
+import { Slide } from 'react-slideshow-image';
 
 const Static = () => {
-    
+
+    const slideImages = [
+        'https://picsum.photos/700/400?random=1',
+        'https://picsum.photos/700/400?random=2',
+        'https://picsum.photos/700/400?random=3'
+    ];
+
+    const properties = {
+        arrows: true,
+        autoplay: false,
+        transitionDuration: 500
+    }
+
     return (
         <div className="container static">
             <div className="gallery">
                 <h2>Gallery</h2>
-                <img src="https://www.geekfreewebdesign.co.nz/wp-content/uploads/2015/02/business-card-marketing.jpg" alt="gallery" />
+                <div className="slide-container">
+                    <Slide {...properties}>
+                        <div className="each-slide">
+                            <div style={{ 'backgroundImage': `url(${slideImages[0]})` }}>
+                            </div>
+                        </div>
+                        <div className="each-slide">
+                            <div style={{ 'backgroundImage': `url(${slideImages[1]})` }}>
+                            </div>
+                        </div>
+                        <div className="each-slide">
+                            <div style={{ 'backgroundImage': `url(${slideImages[2]})` }}>
+                            </div>
+                        </div>
+                    </Slide>
+                </div>
             </div>
             <div className="text">
                 <h2>Heading 1</h2>
